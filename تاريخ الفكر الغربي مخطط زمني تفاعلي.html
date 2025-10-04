@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تاريخ الفكر الغربي - الأعوام على الخط الزمني</title>
+    <style>
+        /* الخطوط والألوان الأساسية */
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+            text-align: right;
+        }
+
+        h1 {
+            color: #1a5276;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* حاوية الخط الزمني */
+        .timeline-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* الخط العمودي */
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #aeb6bf;
+            top: 0;
+            bottom: 0;
+            right: 50%;
+            /* وسط الصفحة */
+            margin-right: -2px;
+        }
+
+        /* نقاط الحدث (العصر) */
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 40%;
+            margin-bottom: 50px;
+            /* زيادة الهامش لإفساح مجال للعام */
+        }
+
+        /* تنسيق الأعوام على الخط الزمني */
+        .era-year {
+            position: absolute;
+            top: 5px;
+            /* رفع العام قليلاً */
+            width: 100px;
+            /* عرض ثابت للعام */
+            padding: 5px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #dc3545;
+            /* لون مميز للأعوام */
+            border-radius: 5px;
+            text-align: center;
+            z-index: 2;
+            /* جعله فوق الخط */
+        }
+
+        /* موقع العام للجانب الأيمن */
+        .right .era-year {
+            right: -130px;
+            /* وضعه بعيداً عن الصندوق الأيمن */
+        }
+
+        /* موقع العام للجانب الأيسر */
+        .left .era-year {
+            left: -130px;
+            /* وضعه بعيداً عن الصندوق الأيسر */
+        }
+
+        /* النقاط على الخط */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            right: -7px;
+            background-color: #fff;
+            border: 4px solid #1a5276;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* ترتيب الأقسام على الجانبين */
+        .right {
+            right: 0;
+            margin-right: 50%;
+        }
+
+        .left {
+            left: 0;
+            margin-left: 50%;
+        }
+
+        /* تغيير مكان النقطة للجانب الأيسر */
+        .left::after {
+            left: -8px;
+            right: auto;
+        }
+
+        /* صندوق المحتوى */
+        .content {
+            padding: 15px;
+            background-color: #fff;
+            position: relative;
+            border-radius: 6px;
+            border-right: 5px solid #2e86c1;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .left .content {
+            border-right: none;
+            border-left: 5px solid #2e86c1;
+        }
+
+        /* عرض التفاصيل دائماً */
+        .details {
+            display: block !important;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #ccc;
+        }
+
+        /* عناوين العصور */
+        .era-title {
+            font-size: 1.3em;
+            color: #1a5276;
+            margin-bottom: 5px;
+        }
+
+        .era-summary {
+            font-weight: bold;
+            color: #5b2c6f;
+        }
+
+        /* إخفاء الفترة الزمنية من داخل الصندوق لأنه تم إظهارها على الخط */
+        .era-period {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>تاريخ الفكر الغربي: مخطط زمني 💡</h1>
+
+    <div class="timeline-container">
+
+        <div class="timeline-item right">
+            <div class="era-year">(القرن ٤ - ١٤)</div>
+            <div class="content">
+                <div class="era-title">العصور الوسطى</div>
+                <span class="era-period">(القرن ٤ - ١٤)</span>
+                <p class="era-summary">الدين واللاهوت والفلسفة</p>
+                <div class="details">
+                    <p><strong>السمة العامة:</strong> فكر مُنغلق ومسيطر عليه من قبل الكنيسة. التركيز على الإيمان بدلاً
+                        من العقل.</p>
+                    <p><strong>الخلاصة:</strong> فكر ديني بحت.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item left">
+            <div class="era-year">(القرن ١٥ - ١٦)</div>
+            <div class="content">
+                <div class="era-title">عصر النهضة</div>
+                <span class="era-period">(القرن ١٥ - ١٦)</span>
+                <p class="era-summary">الاستنارة، الاكتشافات، العلوم والإنسانية</p>
+                <div class="details">
+                    <p><strong>أبرز المفاهيم:</strong> الاكتشافات، الكشوفات، الطباعة، العودة للفكر اليوناني.</p>
+                    <p><strong>التحول:</strong> بداية التركيز على الإنسان بدلاً من الله.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item right">
+            <div class="era-year">القرن ١٧</div>
+            <div class="content">
+                <div class="era-title">القرن السابع عشر</div>
+                <span class="era-period">عصر الإصلاح والكفاح</span>
+                <p class="era-summary">صراع فكري وسياسي</p>
+                <div class="details">
+                    <p><strong>شخصيات رئيسية:</strong> لوك، هوبز، ديكارت (مبدأ الشك)، روسو.</p>
+                    <p><strong>الخلاصة:</strong> مرحلة انتقالية تأسيسية للفكر الحديث.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item left">
+            <div class="era-year">القرن ١٨</div>
+            <div class="content">
+                <div class="era-title">القرن الثامن عشر</div>
+                <span class="era-period">عصر التنوير</span>
+                <p class="era-summary">العقلانية والحرية الفكرية</p>
+                <div class="details">
+                    <p><strong>شخصيات رئيسية:</strong> مونتسكيو، فولتير، كانط.</p>
+                    <p><strong>الخلاصة:</strong> ذروة العقلانية والدعوة للحريات السياسية والفكرية.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item right">
+            <div class="era-year">القرن ١٩ - ٢٠</div>
+            <div class="content">
+                <div class="era-title">القرن التاسع عشر والعشرون</div>
+                <span class="era-period">الفكر الحديث وما بعد الحداثة</span>
+                <p class="era-summary">اللا دينية والشك الجذري</p>
+                <div class="details">
+                    <p><strong>شخصيات رئيسية:</strong> كارل ماركس، نيتشه، فرويد، داروين.</p>
+                    <p><strong>الخلاصة:</strong> تفكيك البنى الفكرية والدينية، والشك في كل الثوابت.</p>
+                    <div class="era-summary" style="margin-top: 10px;">(اللا دينية، اللا مذهب، اللا مادة)</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
