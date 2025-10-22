@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مخطط حملة العلم (فقهاء ومحدثون)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f7fafc;
+        }
+
+        .school-card,
+        .hadith-layer-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .school-card:hover,
+        .hadith-layer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .layer-title {
+            font-weight: 700;
+            color: #1e3a8a;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+
+        .scholar-name {
+            background-color: #eff6ff;
+            /* Default: Faqih */
+            color: #1d4ed8;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 4px;
+            border: 1px solid transparent;
+        }
+
+        /* Yellow Highlight: Fiqh Imam */
+        .imam-scholar {
+            background-color: #fef9c3;
+            color: #713f12;
+            border-color: #facc15;
+        }
+
+        /* Green Highlight + Underline: Overlap (Faqih + Muhaddith) */
+        .overlap-scholar {
+            background-color: #dcfce7;
+            color: #166534;
+            border-color: #4ade80;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-color: #22c55e;
+        }
+
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 18px solid #3b82f6;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-5xl font-bold text-blue-800">سلسلة «حملة العلم وحفظة الشريعة»</h1>
+            <p class="text-lg text-gray-600 mt-2">مخطط مدمج يوضح طبقات الفقهاء والمحدثين</p>
+        </header>
+
+        <!-- Legend -->
+        <div class="my-8 p-4 bg-white rounded-xl shadow-lg border border-gray-200 max-w-3xl mx-auto">
+            <h3 class="text-xl font-bold text-center mb-4 text-gray-700">مفتاح المخطط</h3>
+            <div class="flex flex-col sm:flex-row justify-center items-center flex-wrap gap-4">
+                <span class="scholar-name">فقيه</span>
+                <span class="scholar-name imam-scholar">فقيه إمام (صاحب مدرسة)</span>
+                <span class="scholar-name overlap-scholar">فقيه ومُحدِّث (مشترك)</span>
+            </div>
+        </div>
+
+        <main>
+            <!-- Layer 0: Sahaba (Founders of Schools) -->
+            <section id="sahaba-founders" class="mb-10">
+                <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">الطبقة المؤسسة: الصحابة الكرام في الأمصار
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="text-center p-4 bg-white rounded-lg shadow border border-blue-100">
+                        <h4 class="font-bold text-lg text-blue-600">المدينة</h4>
+                        <p class="text-sm">ابن عمر، زيد بن ثابت، عائشة</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-lg shadow border border-blue-100">
+                        <h4 class="font-bold text-lg text-blue-600">مكة</h4>
+                        <p class="text-sm">عبد الله بن عباس</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-lg shadow border border-blue-100">
+                        <h4 class="font-bold text-lg text-blue-600">الكوفة</h4>
+                        <p class="text-sm">علي بن أبي طالب، ابن مسعود</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-lg shadow border border-blue-100">
+                        <h4 class="font-bold text-lg text-blue-600">البصرة</h4>
+                        <p class="text-sm">أنس بن مالك</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-lg shadow border border-blue-100">
+                        <h4 class="font-bold text-lg text-blue-600">الشام</h4>
+                        <p class="text-sm">أبو الدرداء</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-lg shadow border border-blue-100">
+                        <h4 class="font-bold text-lg text-blue-600">مصر</h4>
+                        <p class="text-sm">عمرو بن العاص، عبد الله بن عمرو</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="arrow-down"></div>
+
+            <!-- Layer 1: Fiqh Schools -->
+            <section id="fiqh-schools" class="mb-12">
+                <h2 class="text-3xl font-bold text-center text-blue-700 my-8">أولاً: طبقات فقهاء الأمصار</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Madinah -->
+                    <div class="school-card">
+                        <h3 class="text-2xl font-bold text-center mb-4 text-green-700">مدرسة المدينة</h3>
+                        <div class="mb-4 p-3 bg-gray-50 rounded-lg border">
+                            <h5 class="font-bold text-sm text-gray-700">عن الصحابة:</h5>
+                            <p class="text-sm text-gray-600">ابن عمر، زيد بن ثابت، عائشة</p>
+                        </div>
+                        <h4 class="layer-title text-green-600 border-green-500">الطبقة الأولى (الفقهاء السبعة)</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">سعيد بن المسيب</span>
+                            <span class="scholar-name">عروة بن الزبير</span>
+                            <span class="scholar-name">القاسم بن محمد</span>
+                            <span class="scholar-name">خارجة بن زيد</span>
+                            <span class="scholar-name">أبو بكر بن عبد الرحمن بن حارث بن هشام</span>
+                            <span class="scholar-name">سليمان بن يسار</span>
+                            <span class="scholar-name">عبيد الله بن عتبة بن مسعود</span>
+                        </p>
+                        <h4 class="layer-title text-green-600 border-green-500 mt-6">الطبقة الثانية</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name overlap-scholar">محمد بن شهاب الزهري</span>
+                            <span class="scholar-name">ربيعة بن أبي عبد الرحمن</span>
+                        </p>
+                        <h4 class="layer-title text-green-600 border-green-500 mt-6">الطبقة الثالثة (فقهاء الأمصار)</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name imam-scholar overlap-scholar">مالك بن أنس</span>
+                        </p>
+                    </div>
+
+                    <!-- Makkah -->
+                    <div class="school-card">
+                        <h3 class="text-2xl font-bold text-center mb-4 text-red-700">مدرسة مكة</h3>
+                        <div class="mb-4 p-3 bg-gray-50 rounded-lg border">
+                            <h5 class="font-bold text-sm text-gray-700">عن الصحابي:</h5>
+                            <p class="text-sm text-gray-600">عبد الله بن عباس</p>
+                        </div>
+                        <h4 class="layer-title text-red-600 border-red-500">الطبقة الأولى</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">عطاء بن أبي رباح</span>
+                            <span class="scholar-name">مجاهد بن جبر</span>
+                            <span class="scholar-name">سعيد بن جبير</span>
+                            <span class="scholar-name">طاووس</span>
+                            <span class="scholar-name">عكرمة</span>
+                            <span class="scholar-name overlap-scholar">عمرو بن دينار</span>
+                        </p>
+                        <h4 class="layer-title text-red-600 border-red-500 mt-6">الطبقة الثانية</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name overlap-scholar">عبد الملك بن عبد العزيز (ابن جريج)</span>
+                            <span class="scholar-name overlap-scholar">sفيان بن عيينة</span>
+                        </p>
+                        <h4 class="layer-title text-red-600 border-red-500 mt-6">الطبقة الثالثة (فقهاء الأمصار)</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name imam-scholar">محمد بن إدريس الشافعي</span>
+                        </p>
+                    </div>
+
+                    <!-- Kufa -->
+                    <div class="school-card">
+                        <h3 class="text-2xl font-bold text-center mb-4 text-purple-700">مدرسة الكوفة</h3>
+                        <div class="mb-4 p-3 bg-gray-50 rounded-lg border">
+                            <h5 class="font-bold text-sm text-gray-700">عن الصحابة:</h5>
+                            <p class="text-sm text-gray-600">علي بن أبي طالب، ابن مسعود</p>
+                        </div>
+                        <h4 class="layer-title text-purple-600 border-purple-500">الطبقة الأولى</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">علقمة</span>
+                            <span class="scholar-name">مسروق</span>
+                            <span class="scholar-name">عبيدة السلماني</span>
+                            <span class="scholar-name">الأسود</span>
+                        </p>
+                        <h4 class="layer-title text-purple-600 border-purple-500 mt-6">الطبقة الثانية</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">إبراهيم النخعي</span>
+                            <span class="scholar-name">عامر الشعبي</span>
+                            <span class="scholar-name">أبو وائل شقيق بن سلمة</span>
+                        </p>
+                        <h4 class="layer-title text-purple-600 border-purple-500 mt-6">الطبقة الثالثة</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">حماد بن أبي سليمان</span>
+                            <span class="scholar-name overlap-scholar">الأعمش</span>
+                            <span class="scholar-name overlap-scholar">أبو إسحاق السبيعي</span>
+                            <span class="scholar-name">محمد بن عبد الرحمن بن أبي ليلى</span>
+                            <span class="scholar-name imam-scholar overlap-scholar">سفيان الثوري</span>
+                            <span class="scholar-name imam-scholar">أبو حنيفة</span>
+                        </p>
+                        <h4 class="layer-title text-purple-600 border-purple-500 mt-6">الطبقة الرابعة</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name imam-scholar overlap-scholar">وكيع بن الجراح</span>
+                            <span class="scholar-name imam-scholar">القاضي أبو يوسف</span>
+                            <span class="scholar-name imam-scholar">محمد بن الحسن</span>
+                        </p>
+                    </div>
+
+                    <!-- Basra -->
+                    <div class="school-card">
+                        <h3 class="text-2xl font-bold text-center mb-4 text-yellow-700">مدرسة البصرة</h3>
+                        <div class="mb-4 p-3 bg-gray-50 rounded-lg border">
+                            <h5 class="font-bold text-sm text-gray-700">عن الصحابي:</h5>
+                            <p class="text-sm text-gray-600">أنس بن مالك</p>
+                        </div>
+                        <h4 class="layer-title text-yellow-600 border-yellow-500">الطبقة الأولى</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">الحسن البصري</span>
+                            <span class="scholar-name">محمد بن سيرين</span>
+                        </p>
+                        <h4 class="layer-title text-yellow-600 border-yellow-500 mt-6">الطبقة الثانية</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">أيوب السختياني</span>
+                            <span class="scholar-name overlap-scholar">قتادة بن دعامة السدوسي</span>
+                        </p>
+                        <h4 class="layer-title text-yellow-600 border-yellow-500 mt-6">الطبقة الثالثة</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">إسماعيل بن علية</span>
+                            <span class="scholar-name">عبد الوهاب الثقفي</span>
+                        </p>
+                        <small class="text-center block mt-2 text-gray-500">(ليسوا بدرجة فقهاء الأمصار)</small>
+                    </div>
+
+                    <!-- Sham -->
+                    <div class="school-card">
+                        <h3 class="text-2xl font-bold text-center mb-4 text-indigo-700">مدرسة الشام</h3>
+                        <div class="mb-4 p-3 bg-gray-50 rounded-lg border">
+                            <h5 class="font-bold text-sm text-gray-700">عن الصحابي:</h5>
+                            <p class="text-sm text-gray-600">أبو الدرداء</p>
+                        </div>
+                        <h4 class="layer-title text-indigo-600 border-indigo-500">الطبقة الأولى</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">أبو إدريس الخولاني</span>
+                            <span class="scholar-name">قبيصة بن ذؤيب</span>
+                            <span class="scholar-name">خالد بن معدان</span>
+                        </p>
+                        <h4 class="layer-title text-indigo-600 border-indigo-500 mt-6">الطبقة الثانية</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">مكحول الشامي</span>
+                        </p>
+                        <h4 class="layer-title text-indigo-600 border-indigo-500 mt-6">الطبقة الثالثة (فقهاء الأمصار)
+                        </h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name imam-scholar overlap-scholar">الأوزاعي</span>
+                            <span class="scholar-name">أبو إسحاق الفزاري</span>
+                        </p>
+                    </div>
+
+                    <!-- Misr -->
+                    <div class="school-card">
+                        <h3 class="text-2xl font-bold text-center mb-4 text-cyan-700">مدرسة مصر</h3>
+                        <div class="mb-4 p-3 bg-gray-50 rounded-lg border">
+                            <h5 class="font-bold text-sm text-gray-700">عن الصحابة:</h5>
+                            <p class="text-sm text-gray-600">عمرو بن العاص، عبد الله بن عمرو</p>
+                        </div>
+                        <h4 class="layer-title text-cyan-600 border-cyan-500">الطبقة الأولى</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">يزيد بن أبي حبيب</span>
+                            <span class="scholar-name">بكير بن عبد الله الأشج</span>
+                        </p>
+                        <h4 class="layer-title text-cyan-600 border-cyan-500 mt-6">الطبقة الثالثة (فقهاء الأمصار)</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name imam-scholar">الليث بن سعد</span>
+                        </p>
+                        <h4 class="layer-title text-cyan-600 border-cyan-500 mt-6">الطبقة الرابعة</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name">عبد الله بن وهب</span>
+                            <span class="scholar-name">أشهب بن عبد العزيز</span>
+                            <span class="scholar-name">عبد الرحمن بن القاسم</span>
+                            <span class="scholar-name">المزني</span>
+                            <span class="scholar-name">البويضي</span>
+                        </p>
+                    </div>
+
+                    <!-- Baghdad -->
+                    <div class="school-card">
+                        <h3 class="text-2xl font-bold text-center mb-4 text-gray-700">مدرسة بغداد</h3>
+                        <h4 class="layer-title text-gray-600 border-gray-500 mt-6">الطبقة الثالثة (فقهاء الأمصار)</h4>
+                        <p class="flex flex-wrap justify-center gap-2">
+                            <span class="scholar-name imam-scholar">أحمد بن حنبل</span>
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="arrow-down"></div>
+
+            <!-- Layer 2: Hadith Layers -->
+            <section id="hadith-layers" class="mb-12">
+                <h2 class="text-3xl font-bold text-center text-blue-700 my-8">ثانياً: طبقات المحدثين (النسب الحديثي)
+                </h2>
+
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <!-- Layer 1 -->
+                    <div class="hadith-layer-card">
+                        <h3 class="text-xl font-bold text-center mb-4 text-gray-700">الطبقة الأولى (محدثين)</h3>
+                        <p class="flex flex-wrap justify-center gap-3">
+                            <span class="scholar-name overlap-scholar">الزهري</span>
+                            <span class="scholar-name overlap-scholar">عمرو بن دينار</span>
+                            <span class="scholar-name overlap-scholar">قتادة بن دعامة السدوسي</span>
+                            <span class="scholar-name">يحيى بن كثير</span>
+                            <span class="scholar-name overlap-scholar">أبو إسحاق السبيعي</span>
+                            <span class="scholar-name overlap-scholar">الأعمش</span>
+                        </p>
+                    </div>
+
+                    <div class="arrow-down !m-auto !my-4"></div>
+
+                    <!-- Layer 2 -->
+                    <div class="hadith-layer-card bg-orange-50 border-orange-200">
+                        <h3 class="text-xl font-bold text-center mb-4 text-orange-800">الطبقة الثانية (محدثين)</h3>
+                        <p class="flex flex-wrap justify-center gap-3">
+                            <span class="scholar-name overlap-scholar imam-scholar">مالك بن أنس</span>
+                            <span class="scholar-name">محمد بن إسحاق</span>
+                            <span class="scholar-name">سعيد بن أبي عروبة</span>
+                            <span class="scholar-name">حماد بن سلمة</span>
+                            <span class="scholar-name">معمر</span>
+                            <span class="scholar-name">أبو عوانة</span>
+                            <span class="scholar-name overlap-scholar">ابن جريج</span>
+                            <span class="scholar-name overlap-scholar">سفيان بن عيينة</span>
+                            <span class="scholar-name">شعبة بن الحجاج</span>
+                            <span class="scholar-name overlap-scholar imam-scholar">سفيان الثوري</span>
+                            <span class="scholar-name overlap-scholar imam-scholar">الأوزاعي</span>
+                            <span class="scholar-name">هشيم بن بشير</span>
+                        </p>
+                    </div>
+
+                    <div class="arrow-down !m-auto !my-4"></div>
+
+                    <!-- Layer 3 -->
+                    <div class="hadith-layer-card">
+                        <h3 class="text-xl font-bold text-center mb-4 text-gray-700">الطبقة الثالثة (محدثين)</h3>
+                        <p class="flex flex-wrap justify-center gap-3">
+                            <span class="scholar-name">يحيى بن سعيد القطان</span>
+                            <span class="scholar-name">يحيى بن زكريا بن أبي زائدة</span>
+                            <span class="scholar-name overlap-scholar imam-scholar">وكيع بن الجراح</span>
+                        </p>
+                    </div>
+
+                    <div class="arrow-down !m-auto !my-4"></div>
+
+                    <!-- Layer 4 -->
+                    <div class="hadith-layer-card bg-blue-50 border-blue-200">
+                        <h3 class="text-xl font-bold text-center mb-4 text-blue-800">الطبقة الرابعة (محدثين)</h3>
+                        <p class="flex flex-wrap justify-center gap-3">
+                            <span class="scholar-name">عبد الله بن المبارك</span>
+                            <span class="scholar-name">عبد الرحمن بن مهدي</span>
+                            <span class="scholar-name">يحيى بن آدم</span>
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-16 py-6 border-t border-gray-200">
+            <p class="text-gray-500">تم إنشاء هذا المخطط بناءً على أول محاضرتين من <a
+                    href="https://www.youtube.com/playlist?list=PLZmiPrHYOIsScpWE8OHC_saqUIZMQmsFe">سلسلة حملة العلم
+                    وحفظة الشريعة للشيخ أحمد السيد.</a></p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
